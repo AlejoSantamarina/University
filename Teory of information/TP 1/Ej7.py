@@ -39,6 +39,8 @@ def simulate_experiment (iterations = 100000):
 
 simulate_experiment()
 
+print("-" * 50)
+
 #Idem 2.
 
 def simulate_experiment2 (iterations = 100000):
@@ -78,3 +80,48 @@ def simulate_experiment2 (iterations = 100000):
     print(f"Difficult after simple: {difficult_after_simple_prob}%.")
 
 simulate_experiment2()
+
+print("-" * 50)
+
+#Idem 4.
+def simulate_experiment3 (iterations = 100000):
+    sick_people = 0
+    healthy_people = 0
+
+    positive_sicks = 0
+    positive_totals = 0
+
+    healthy_and_N = 0
+    sick_and_P = 0
+
+    negative_test = 0
+    positive_test = 0
+
+    for _ in range(iterations):
+        sick = random.random() < 0.005
+        if sick:
+            sick_people+= 1
+            test = random.random() < 0.95
+            if test:
+                positive_sicks+= 1
+                sick_and_P+= 1
+                positive_test+= 1
+            else:
+                negative_test+= 1
+        else:
+            healthy_people+= 1
+            test = random.random() < 0.04
+            if test:
+                positive_totals+= 1
+                positive_test+=1
+            else:
+                negative_test+= 1
+                healthy_and_N+= 1
+
+    healthy_and_N_prob = f"{healthy_and_N/negative_test*100:.2f}%"
+    sick_and_P_prob = f"{sick_and_P/positive_test*100:.2f}%"
+    
+    print(f"Healthy and negative {healthy_and_N_prob}")
+    print(f"Sick and positive {sick_and_P_prob}")
+
+simulate_experiment3()
