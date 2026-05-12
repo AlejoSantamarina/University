@@ -1,0 +1,8 @@
+Implemente en máquina los tres pseudocódigos planteados en el ejercicio 7 y evalúe:
+¿Cómo varía el tiempo de convergencia y el resultado del algoritmo cuando se reduce la cota o error de convergencia? Analice al menos para 4 cotas de convergencia diferentes.
+¿Qué ocurre cuando no se define un número mínimo de experimentos?
+
+#La logica es la siguiente:
+    - Calculo la probabilidad con los datos que tengo hasta ahora.
+    - Calculo el EE (error estandar) con los datos que tengo hasta ahora.
+    - Si el EE < Cota, entonces el programa se detiene y se queda con esa probabilidad.
