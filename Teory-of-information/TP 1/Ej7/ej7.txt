@@ -1,0 +1,12 @@
+Plantee el pseudocódigo de un algoritmo que permita resolver mediante muestreos aleatorios computacionales (motor Montecarlo) cada uno de los siguientes ejercicios: 1, 2 y 4.
+
+1. En un juego de preguntas y respuestas se colocan 6 tarjetas boca abajo (4 con preguntas simples y 2 con preguntas difíciles). En cada turno, se elige una tarjeta al azar, se devuelve y luego de mezcladas se elige otra. Obtenga la probabilidad de que:
+    a. ambas preguntas sean difíciles
+    b. sólo una de las preguntas sea difícil
+    c. la segunda pregunta sea difícil, dado que 	la primera fue simple
+
+2. Ídem 1, pero considerando que las 2 tarjetas se extraen a la vez. 
+
+4. A partir de un estudio estadístico en una población se ha determinado que la probabilidad de que una persona posea cierta enfermedad es 0,005. Se ha comprobado además que si una persona posee la enfermedad, la probabilidad de que el examen médico arroje un resultado positivo es del 95%. Por otro lado, si alguien que no posee la enfermedad se somete al examen, la probabilidad de que éste dé resultado negativo es del 96%. 
+    a. si alguien obtiene un resultado negativo en el examen, cuál es la probabilidad de que esté sana?
+    b. si alguien obtiene un resultado positivo, ¿cuál es la probabilidad de que realmente esté enferma? 
