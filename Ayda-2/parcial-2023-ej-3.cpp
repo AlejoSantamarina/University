@@ -10,7 +10,7 @@ struct Coordenada {
 
 vector<Coordenada> recorridoOptimo;
 
-vector<int> dFila = {0, 0, 1, -1};
+vector<int> dFila = {0, 0, -1, 1};
 vector<int> dColumna = {1, -1, 0, 0};
 
 bool esPosicionValida(Coordenada posicion, const vector<vector<int>>& tablero, vector<vector<bool>>& posRecorridas) {
