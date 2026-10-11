@@ -9,7 +9,6 @@ struct Coordenada {
 };
 
 vector<vector<char>> soluciónActual;
-vector<vector<char>> tablero;
 vector<vector<vector<char>>> allSoluciones;
 
 bool esValido(char color, Coordenada posActual, const vector<vector<char>>& soluciónActual) {
@@ -30,9 +29,11 @@ bool esValido(char color, Coordenada posActual, const vector<vector<char>>& solu
     return true;
 }
 
-void backTracking(const vector<vector<char>>& tablero, vector<vector<char>>& soluciónActual, Coordenada posActual, const vector<char>& colores, vector<vector<vector<char>>>& allSoluciones) {
+void backTracking(vector<vector<char>>& soluciónActual, Coordenada posActual, const vector<char>& colores, vector<vector<vector<char>>>& allSoluciones) {
 
-    if(posActual.y >= tablero.size()) {
+    int n = soluciónActual.size();
+
+    if(posActual.y >= n) {
         allSoluciones.push_back(soluciónActual);
         return;
     }
@@ -44,7 +45,7 @@ void backTracking(const vector<vector<char>>& tablero, vector<vector<char>>& sol
             
             Coordenada posTemporal;
 
-            if(posActual.x == tablero.size() - 1) {
+            if(posActual.x == n - 1) {
                 posTemporal.x = 0;             
                 posTemporal.y = posActual.y + 1; 
             } else {
@@ -52,7 +53,7 @@ void backTracking(const vector<vector<char>>& tablero, vector<vector<char>>& sol
                 posTemporal.y = posActual.y;     
             }
             
-            backTracking(tablero, soluciónActual, posTemporal, colores, allSoluciones);
+            backTracking(soluciónActual, posTemporal, colores, allSoluciones);
             
             soluciónActual[posActual.y][posActual.x] = ' '; 
         }
